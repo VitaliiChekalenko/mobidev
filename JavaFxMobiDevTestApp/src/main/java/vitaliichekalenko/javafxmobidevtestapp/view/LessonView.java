@@ -20,7 +20,7 @@ public class LessonView {
 
         currentQuestion = LessonManager.getInstance().getSampleQuestion();
 
-        Label questionLabel = new Label(currentQuestion.getQuestion());
+        Label questionLabel = new Label(currentQuestion.getText());
         ToggleGroup group = new ToggleGroup();
         VBox optionsBox = new VBox(5);
 

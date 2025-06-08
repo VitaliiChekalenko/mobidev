@@ -3,19 +3,29 @@ package vitaliichekalenko.javafxmobidevtestapp.model;
 import java.util.List;
 
 public class Question {
-    private String question;
-    private List<String> options;
-    private String correctAnswer;
+    private final String text;
+    private final List<String> options;
+    private final int correctIndex;
 
-    public Question(String question, List<String> options, String correctAnswer) {
-        this.question = question;
+    public Question(String text, List<String> options, int correctIndex) {
+        this.text = text;
         this.options = options;
-        this.correctAnswer = correctAnswer;
+        this.correctIndex = correctIndex;
     }
 
-    public String getQuestion() { return question; }
-    public List<String> getOptions() { return options; }
+    public String getText() {
+        return text;
+    }
+
+    public List<String> getOptions() {
+        return options;
+    }
+
+    public int getCorrectIndex() {
+        return correctIndex;
+    }
+
     public boolean checkAnswer(String answer) {
-        return correctAnswer.equalsIgnoreCase(answer);
+        return options.get(correctIndex).equals(answer);
     }
 }

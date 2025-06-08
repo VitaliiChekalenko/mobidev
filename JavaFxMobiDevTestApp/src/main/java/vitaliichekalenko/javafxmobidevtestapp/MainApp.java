@@ -1,17 +1,13 @@
 package vitaliichekalenko.javafxmobidevtestapp;
 
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import vitaliichekalenko.javafxmobidevtestapp.view.LoginView;
+import vitaliichekalenko.javafxmobidevtestapp.controller.QuizController;
 
 public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
-        LoginView loginView = new LoginView(primaryStage);
-        primaryStage.setTitle("MobiDevTestApp");
-        primaryStage.setScene(new Scene(loginView.getView(), 400, 300));
-        primaryStage.show();
+        new QuizController(primaryStage).start();
     }
 
     public static void main(String[] args) {
