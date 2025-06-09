@@ -18,7 +18,7 @@ public class LessonManager {
         return new Question(
                 "What is the Spanish word for 'apple'?",
                 Arrays.asList("manzana", "pera", "uva", "naranja"),
-                "manzana"
+                0
         );
     }
 }
